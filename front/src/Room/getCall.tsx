@@ -41,6 +41,9 @@ export default function useGetMedia() {
     if (isCam) {
       if (scr) {
         calob.addTrack(scr.getTracks()[0]);
+      } else {
+        scr = await navigator.mediaDevices.getDisplayMedia();
+        calob.addTrack(scr.getTracks()[0]);
       }
       setIscam(false);
       setCall(calob);
