@@ -1,7 +1,9 @@
 const { Server } = require("socket.io");
 
 const io = new Server(8000, {
-  cors: true,
+  cors: {
+    origin: "https://fileshareing-lxc7.onrender.com",
+  },
 });
 
 let logs = [];
