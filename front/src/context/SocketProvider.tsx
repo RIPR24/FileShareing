@@ -20,7 +20,7 @@ export const useSocket = () => {
 
 const SocketProvider = ({ children }: props) => {
   const socket: Socket = useMemo(() => {
-    return io("http://localhost:8000/");
+    return io("https://webrtc-hwj9.onrender.com/");
   }, []);
 
   return (
